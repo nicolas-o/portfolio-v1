@@ -1,6 +1,13 @@
 import { useState } from "react";
 import useStyles from "./styles";
-import { Typography, Grid, Card, CardContent, Chip } from "@material-ui/core";
+import {
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  Chip,
+  Button,
+} from "@material-ui/core";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
@@ -9,8 +16,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import uuid from "react-uuid";
-import ArrowDropDownCircleOutlinedIcon from "@material-ui/icons/ArrowDropDownCircleOutlined";
-import { Block } from "@material-ui/icons";
+import LaunchIcon from "@material-ui/icons/Launch";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -123,9 +130,34 @@ export const ProyectosInfo = () => {
                       </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                      <Typography gutterBottom variant="body1" component="p">
-                        Tecnologias
-                      </Typography>
+                      <div className={classes.tecLinks}>
+                        <Typography gutterBottom variant="body1" component="p">
+                          Tecnologias
+                        </Typography>
+                        <div>
+                          <a
+                            className={classes.btn}
+                            href={proyecto.webLink}
+                            target="_blank"
+                          >
+                            <LaunchIcon
+                              style={{
+                                marginRight: "8px",
+                                fontSize: "1.8em",
+                                marginBottom: "-2.8px",
+                              }}
+                              className={classes.icons}
+                            />
+                          </a>
+                          <a
+                            className={classes.btn}
+                            href={proyecto.githubLink}
+                            target="_blank"
+                          >
+                            <GitHubIcon className={classes.icons} />
+                          </a>
+                        </div>
+                      </div>
                       <br />
 
                       {[proyecto.tecnologias].map((tec) => {

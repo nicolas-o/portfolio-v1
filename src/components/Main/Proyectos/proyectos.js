@@ -19,6 +19,8 @@ export const proyectos = [
     image: [presupuestoViajes1, presupuestoViajes2, presupuestoViajes3],
     animation: "fade-right",
     tecnologias: ["React.js", "Firebase", "Chart-2.js", "Material-ui", "uuid"],
+    webLink: "https://presupuesto-de-viajes.netlify.app/",
+    githubLink: "#",
     description:
       "Esta es una aplicación simple para poder calcular exactamente los gastos que se necesitarian para ciertos viajes y tener un presupuesto más certero. Desarrolle está aplicación con React.js y utilizando firebase para almacenar el presupuesto y los gastos.",
   },
@@ -37,6 +39,8 @@ export const proyectos = [
       "Fontawesome",
       "React-router",
     ],
+    webLink: "https://el-maestro.netlify.app/",
+    githubLink: "#",
     description:
       "Esta es una aplicación que desarrolle pensando en una sangucheria, despliega el menú de forma simple y de fácil acceso. La desarrolle utilizando React.js, material-ui para el estilo y react-spring para las animaciones.",
   },
@@ -54,6 +58,9 @@ export const proyectos = [
       "React-sping",
       "Illustrator",
     ],
+    webLink: "https://nicolas-orellana.netlify.app/",
+    githubLink: "#",
+
     description:
       "Este es el primer portafolio que he desarrollado con React.js.",
   },

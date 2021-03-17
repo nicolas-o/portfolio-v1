@@ -107,4 +107,18 @@ export default makeStyles((theme) => ({
   chip: {
     margin: "5px",
   },
+  tecLinks: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  icons: {
+    "&:hover": {
+      color: "#0B5C4B",
+      transform: "scale(1.1)!important",
+    },
+  },
+  btn: {
+    color: "inherit",
+    textDecoration: "none",
+  },
 }));
