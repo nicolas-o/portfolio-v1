@@ -3,6 +3,7 @@ import useStyles from "./styles";
 import { Typography, Grid, Divider } from "@material-ui/core";
 import { Code, People, Palette } from "@material-ui/icons";
 import useOnScreen from "../../../utils/useOnScreen";
+import { listaTecnologias } from "./listaTecnologias";
 
 const QueHago = () => {
   const classes = useStyles();
@@ -72,43 +73,23 @@ const QueHago = () => {
         spacing={0}
         justify="center"
         className={classes.tecnologias}
+        data-aos="zoom-in-up"
+        data-aos-duration="400"
       >
-        <Grid item xs={3}>
-          <div data-aos="flip-down">
-            <Typography variant="body2">Tecnologías:</Typography>
-          </div>
-        </Grid>
-        <Grid item xs={3}>
-          <div data-aos="flip-down">
-            <Typography variant="body2">Python</Typography>
-            <Typography variant="body2">HTML</Typography>
-            <Typography variant="body2">CSS</Typography>
-
-            <Typography variant="body2">Javascript</Typography>
-            <Typography variant="body2">React</Typography>
-            <Typography variant="body2">bootstrap</Typography>
-          </div>
-        </Grid>
-        <Grid item xs={3}>
-          <div data-aos="flip-down" ref={ref}>
-            <Typography variant="body2">React-Spring</Typography>
-            <Typography variant="body2">Material-ui</Typography>
-            <Typography variant="body2">Aos</Typography>
-            <Typography variant="body2">Sass</Typography>
-
-            <Typography variant="body2">SQL</Typography>
-            <Typography variant="body2">Firebase</Typography>
-          </div>
-        </Grid>
-        <Grid item xs={3}>
-          <div data-aos="flip-down">
-            <Typography variant="body2">Git</Typography>
-            <Typography variant="body2">Github</Typography>
-            <Typography variant="body2">Trello</Typography>
-            <Typography variant="body2">Slack</Typography>
-            <Typography variant="body2">Wireframing</Typography>
-          </div>
-        </Grid>
+        <Typography variant="subtitle2" style={{ marginRight: "30px" }}>
+          Tecnologías:
+        </Typography>
+        <div className={classes.grid} ref={ref}>
+          {listaTecnologias.map((item) => (
+            <Typography
+              key={item}
+              variant="subtitle2"
+              className={classes.tecList}
+            >
+              {item}
+            </Typography>
+          ))}
+        </div>
       </Grid>
     </Grid>
   );

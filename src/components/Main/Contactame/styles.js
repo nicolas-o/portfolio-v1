@@ -9,10 +9,10 @@ export default makeStyles((theme) => ({
   divider: {
     maxWidth: "1000px",
     margin: "0 auto",
-    marginBottom: "50px",
+    marginBottom: "90px",
   },
   content: {
-    margin: "70px 20px 20px 20px",
+    margin: "30px 20px 20px 20px",
   },
   contactame: {
     maxWidth: "80vw",

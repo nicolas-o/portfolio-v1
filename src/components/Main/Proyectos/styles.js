@@ -9,19 +9,19 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    margin: "70px 20px!important",
+    margin: "30px!important",
     maxWidth: "1000px!important",
   },
 
   divider: {
-    marginBottom: "50px!important",
+    marginBottom: "40px!important",
   },
 
   proyectContainer: {
     cursor: "pointer",
     backgroundPosition: "center",
-    height: 270,
-    width: 480,
+    height: 240,
+    width: 450,
     boxSizing: "border-box",
     position: "relative",
     transition: "background-size 0.5s",

@@ -9,22 +9,26 @@ export default makeStyles((theme) => ({
   divider: {
     maxWidth: "1000px",
     margin: "0 auto",
-    marginBottom: "50px",
+    marginBottom: "30px",
   },
   content: {
-    margin: "70px 20px 20px 20px",
+    margin: "30px 20px 0px 20px!important",
   },
   queHago: {
     maxWidth: "80vw",
     margin: "0 auto",
   },
   tecnologias: {
-    padding: "20px",
-    width: "50vw",
-    margin: "0 auto",
-    height: "140px",
-    borderRadius: "15px",
+    height: "20vh",
+    margin: "20px!important",
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
     textAlign: "left",
+  },
+  tecList: {
+    marginRight: "20px",
   },
   icons: {
     fontSize: "60px",

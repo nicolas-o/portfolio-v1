@@ -9,12 +9,12 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    margin: "70px 20px!important",
+    margin: "30px 20px!important",
     maxWidth: "1000px!important",
   },
 
   divider: {
-    marginBottom: "50px!important",
+    marginBottom: "80px!important",
   },
 
   resumen: {

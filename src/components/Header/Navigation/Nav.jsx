@@ -50,7 +50,7 @@ const Nav = () => {
                 ? classes.linksOnActive
                 : ""
             }`}
-            offset={20}
+            offset={45}
             href="#SobreMi"
           >
             Sobre Mi
@@ -61,7 +61,7 @@ const Nav = () => {
                 ? classes.linksOnActive
                 : ""
             }`}
-            offset={20}
+            offset={45}
             href="#queHago"
           >
             Que Hago
@@ -72,7 +72,7 @@ const Nav = () => {
                 ? classes.linksOnActive
                 : ""
             }`}
-            offset={50}
+            offset={45}
             href="#proyectos"
           >
             Proyectos
@@ -81,7 +81,7 @@ const Nav = () => {
             className={`${classes.links} ${
               global.isContactameVisible ? classes.linksOnActive : ""
             }`}
-            offset={50}
+            offset={45}
             href="#contactame"
           >
             Contactame
