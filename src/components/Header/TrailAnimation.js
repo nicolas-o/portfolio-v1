@@ -1,18 +1,16 @@
-import { useState } from "react";
-import { useTrail, a, useTransition } from "react-spring";
-import useStyles from "./styles";
+import { useState, useContext } from "react";
+import { useTrail, a } from "react-spring";
 import uuid from "react-uuid";
-import { Typography, Button } from "@material-ui/core";
-import ArrowForward from "@material-ui/icons/ArrowForward";
+import { Typography } from "@material-ui/core";
+import { LanguageTracker } from "../../context/context";
 
 function Trail({ children, ...props }) {
-  const classes = useStyles();
-  const [buttonOnHover, setButtonOnHover] = useState(false);
-
+  const { language } = useContext(LanguageTracker);
+  const lang = language[0].header;
   const items = [
-    <Typography variant="subtitle1">Hola, mi nombre es </Typography>,
-    <Typography variant="h3">Nicolas Orellana</Typography>,
-    <Typography variant="h5">Front-end Developer</Typography>,
+    <Typography variant="subtitle1">{lang[0]}</Typography>,
+    <Typography variant="h3">{lang[1]}</Typography>,
+    <Typography variant="h5">{lang[2]}</Typography>,
   ];
 
   const trail = useTrail(items.length, {

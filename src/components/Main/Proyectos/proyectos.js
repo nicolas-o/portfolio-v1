@@ -12,7 +12,7 @@ import portfolio3 from "../../../assets/portfolio3.jpg";
 import portfolio4 from "../../../assets/portfolio4.jpg";
 import portfolio5 from "../../../assets/portfolio5.jpg";
 
-export const proyectos = [
+export const proyectosSpa = [
   {
     className: "presupuestoViajes",
     name: "Presupuesto de Viajes",
@@ -62,6 +62,60 @@ export const proyectos = [
     githubLink: "#",
 
     description:
-      "Este es el primer portafolio que he desarrollado con React.js.",
+      "Este es el primer portafolio que he desarrollado con React.js, Material-ui, React-spring y otras librerias.",
+  },
+];
+
+export const proyectosEng = [
+  {
+    className: "presupuestoViajes",
+    name: "Travel Budget",
+    image: [presupuestoViajes1, presupuestoViajes2, presupuestoViajes3],
+    animation: "fade-right",
+    tecnologias: ["React.js", "Firebase", "Chart-2.js", "Material-ui", "uuid"],
+    webLink: "https://presupuesto-de-viajes.netlify.app/",
+    githubLink: "#",
+    description:
+      "This is a simple app to calculate the cost of travel expenses the user will need to know for certain trips. I developed this app with React.js and firebase to keep the data on a local storage.",
+  },
+  {
+    className: "elMaestro",
+    name: "El Maestro Sangucheria",
+    image: [elMaestro1, elMaestro2, elMaestro3, elMaestro4, elMaestro5],
+    animation: "fade-left",
+    tecnologias: [
+      "Reacts.js",
+      "Material-ui",
+      "React-sping",
+      "Aos",
+      "uuid",
+      "React-slick",
+      "Fontawesome",
+      "React-router",
+    ],
+    webLink: "https://el-maestro.netlify.app/",
+    githubLink: "#",
+    description:
+      "I made this app thinking about a fast food restaurant. It has a very simple and easy to use interface. I developed it with React.js, Material-ui for styling and react-spring for animations.",
+  },
+  {
+    className: "Portfoliov1",
+    name: "Portfolio v1",
+    image: [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5],
+    animation: "fade-up",
+    tecnologias: [
+      "Reacts.js",
+      "Material-ui",
+      "uuid",
+      "React-slick",
+      "Aos",
+      "React-sping",
+      "Illustrator",
+    ],
+    webLink: "https://nicolas-orellana.netlify.app/",
+    githubLink: "#",
+
+    description:
+      "This is the first portfolio that I've developed. I made it with React.js, Material-ui, React-spring and other libraries.",
   },
 ];

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import useStyles from "./styles";
 import {
   Typography,
@@ -18,6 +18,9 @@ import Slider from "react-slick";
 import uuid from "react-uuid";
 import LaunchIcon from "@material-ui/icons/Launch";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { LanguageTracker } from "../../../context/context";
+import { proyectosSpa } from "../Proyectos/proyectos";
+import { proyectosEng } from "../Proyectos/proyectos";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -55,6 +58,9 @@ function PrevArrow(props) {
 }
 
 export const ProyectosInfo = () => {
+  const { lang } = useContext(LanguageTracker);
+  const proyectos = lang === "en" ? proyectosEng : proyectosSpa;
+
   const classes = useStyles();
   const [modalOpen, setModalOpen] = useState();
   const [nameOpen, setNameOpen] = useState();
@@ -132,7 +138,7 @@ export const ProyectosInfo = () => {
                     <Grid item xs={12} sm={4}>
                       <div className={classes.tecLinks}>
                         <Typography gutterBottom variant="body1" component="p">
-                          Tecnologias
+                          {lang === "en" ? "Technologies" : "Tecnologías"}
                         </Typography>
                         <div>
                           <a
