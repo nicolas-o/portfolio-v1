@@ -53,9 +53,9 @@ export default makeStyles((theme) => ({
     transform: "scale(1)!important",
   },
   appBar: {
-    zIndex: "9999",
-    boxShadow: "none",
-    background: "black",
+    zIndex: "9999!important",
+    boxShadow: "none!important",
+    background: "black!important",
     [theme.breakpoints.up("md")]: {
       display: "none!important",
     },
@@ -75,8 +75,8 @@ export default makeStyles((theme) => ({
     },
   },
   drawerPaper: {
-    marginTop: "64px",
-    background: "black",
+    marginTop: "64px!important",
+    background: "black!important",
   },
   list: {
     display: "flex!important",
