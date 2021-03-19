@@ -19,15 +19,19 @@ const SobreMi = () => {
 
   return (
     <Grid container spacing={0} id="SobreMi" className={classes.container}>
-      {[lang].map((item) => (
-        <Grid item xs={12} className={classes.content}>
-          <Typography variant="h3" data-aos="fade-left">
-            {item[0]}
-          </Typography>
-          <Divider className={classes.divider} />
-          <div data-aos="fade-right">
+      <Grid item xs={12} className={classes.content}>
+        <Typography
+          variant="h3"
+          data-aos="fade-left"
+          className={classes.contentTitle}
+        >
+          {lang[0]}
+        </Typography>
+        <Divider className={classes.divider} />
+        <div ref={ref}>
+          <div data-aos="fade-up">
             <Typography variant="body1">
-              {item[1]}
+              {lang[1]}
               <a
                 href="https://www.byui.edu/"
                 target="_blank"
@@ -35,16 +39,16 @@ const SobreMi = () => {
               >
                 <strong>Brigham Young University.</strong>
               </a>
-              {item[2]}
+              {lang[2]}
             </Typography>
 
             <br />
-            <Typography variant="body1">{item[3]}</Typography>
+            <Typography variant="body1">{lang[3]}</Typography>
           </div>
-          <div data-aos="zoom-in" data-aos-duration="500" ref={ref}>
+          <div data-aos="zoom-in" data-aos-duration="500">
             <Container className={classes.resumen}>
               <Typography variant="h6" className={classes.resumenText}>
-                {item[4]}
+                {lang[4]}
               </Typography>
 
               <Container className={classes.iconContainer}>
@@ -52,25 +56,25 @@ const SobreMi = () => {
                   <Boop rotation={30} timing={200}>
                     <LocalMoviesOutlined className={classes.icons} />
                   </Boop>
-                  <Typography variant="subtitle1">{item[5]}</Typography>
+                  <Typography variant="subtitle1">{lang[5]}</Typography>
                 </div>
                 <div>
                   <Boop rotation={30} timing={200}>
                     <DeveloperMode className={classes.biggerIcon} />
                   </Boop>
-                  <Typography variant="subtitle1">{item[6]}</Typography>
+                  <Typography variant="subtitle1">{lang[6]}</Typography>
                 </div>
                 <div>
                   <Boop rotation={30} timing={200}>
                     <LocalPizzaOutlined className={classes.icons} />
                   </Boop>
-                  <Typography variant="subtitle1">{item[7]}</Typography>
+                  <Typography variant="subtitle1">{lang[7]}</Typography>
                 </div>
               </Container>
             </Container>
           </div>
-        </Grid>
-      ))}
+        </div>
+      </Grid>
     </Grid>
   );
 };

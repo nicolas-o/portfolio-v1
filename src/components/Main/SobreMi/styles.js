@@ -11,8 +11,13 @@ export default makeStyles((theme) => ({
     textAlign: "center",
     margin: "30px 20px!important",
     maxWidth: "1000px!important",
+    overflowX: "hidden!important",
   },
-
+  contentTitle: {
+    [theme.breakpoints.down("xs")]: {
+      transform: "scale(0.8)!important",
+    },
+  },
   divider: {
     marginBottom: "80px!important",
   },
@@ -27,12 +32,17 @@ export default makeStyles((theme) => ({
     padding: "20px",
   },
   iconContainer: {
-    display: "flex!important",
-    justifyContent: "space-evenly",
-    alignItems: "flex-end",
-    padding: "30px 20px",
+    [theme.breakpoints.up("sm")]: {
+      display: "flex!important",
+      justifyContent: "space-evenly",
+      alignItems: "flex-end",
+      padding: "30px 20px",
+    },
   },
   icons: {
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "15px",
+    },
     fontSize: "65px!important",
     "&:hover": {
       color: "#0B5C4B",
@@ -40,6 +50,7 @@ export default makeStyles((theme) => ({
   },
 
   biggerIcon: {
+    marginTop: "10px",
     fontSize: "100px!important",
     "&:hover": {
       color: "#0B5C4B",

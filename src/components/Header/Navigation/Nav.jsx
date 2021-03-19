@@ -30,74 +30,72 @@ const Nav = () => {
 
   return (
     <a.div style={navSpring}>
-      {[lang].map((item) => (
-        <AppBar
-          key={item}
-          className={`${classes.nav} ${
-            window.pageYOffset > 50 ? classes.navOnScroll : ""
+      <AppBar
+        className={`${classes.nav} ${
+          window.pageYOffset > 50 ? classes.navOnScroll : ""
+        }`}
+      >
+        <Toolbar
+          className={`${classes.toolbar} ${
+            window.pageYOffset > 50 ? classes.toolbarOnScroll : ""
           }`}
         >
-          <Toolbar
-            className={`${classes.toolbar} ${
-              window.pageYOffset > 50 ? classes.toolbarOnScroll : ""
+          <Button
+            className={classes.logo}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+          ></Button>
+          <AnchorLink
+            className={`${classes.links} ${
+              global.isHeaderVisible === false &&
+              global.isSobreMiVisible &&
+              global.isQueHagoVisible === false
+                ? classes.linksOnActive
+                : ""
             }`}
+            offset={45}
+            href="#SobreMi"
           >
-            <Button
-              className={classes.logo}
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
-            ></Button>
-            <AnchorLink
-              className={`${classes.links} ${
-                global.isSobreMiVisible && global.isQueHagoVisible === false
-                  ? classes.linksOnActive
-                  : ""
-              }`}
-              offset={45}
-              href="#SobreMi"
-            >
-              {item[0]}
-            </AnchorLink>
-            <AnchorLink
-              className={`${classes.links} ${
-                global.isQueHagoVisible && global.isProyectosVisible === false
-                  ? classes.linksOnActive
-                  : ""
-              }`}
-              offset={45}
-              href="#queHago"
-            >
-              {item[1]}
-            </AnchorLink>
-            <AnchorLink
-              className={`${classes.links} ${
-                global.isProyectosVisible &&
-                global.isContactameVisible === false
-                  ? classes.linksOnActive
-                  : ""
-              }`}
-              offset={45}
-              href="#proyectos"
-            >
-              {item[2]}
-            </AnchorLink>
-            <AnchorLink
-              className={`${classes.links} ${
-                global.isContactameVisible ? classes.linksOnActive : ""
-              }`}
-              offset={45}
-              href="#contactame"
-            >
-              {item[3]}
-            </AnchorLink>
-            <LanguageMenu />
-          </Toolbar>
-        </AppBar>
-      ))}
+            {lang[0]}
+          </AnchorLink>
+          <AnchorLink
+            className={`${classes.links} ${
+              global.isQueHagoVisible && global.isProyectosVisible === false
+                ? classes.linksOnActive
+                : ""
+            }`}
+            offset={45}
+            href="#queHago"
+          >
+            {lang[1]}
+          </AnchorLink>
+          <AnchorLink
+            className={`${classes.links} ${
+              global.isProyectosVisible && global.isContactameVisible === false
+                ? classes.linksOnActive
+                : ""
+            }`}
+            offset={45}
+            href="#proyectos"
+          >
+            {lang[2]}
+          </AnchorLink>
+          <AnchorLink
+            className={`${classes.links} ${
+              global.isContactameVisible ? classes.linksOnActive : ""
+            }`}
+            offset={45}
+            href="#contactame"
+          >
+            {lang[3]}
+          </AnchorLink>
+          <LanguageMenu />
+        </Toolbar>
+      </AppBar>
     </a.div>
   );
 };

@@ -19,11 +19,13 @@ const Contactame = () => {
   return (
     <>
       <Grid container spacing={0} id="contactame" className={classes.container}>
-        {[lang].map((item) => (
-          <Grid item xs={12} className={classes.content}>
-            <div data-aos="fade-right">
-              <Typography variant="h3">{item[0]}</Typography>
-            </div>
+        <Grid item xs={12} className={classes.content}>
+          <div data-aos="fade-right">
+            <Typography variant="h3" className={classes.contentTitle}>
+              {lang[0]}
+            </Typography>
+          </div>
+          <div ref={ref}>
             <Divider className={classes.divider} />
             <Grid
               container
@@ -59,7 +61,7 @@ const Contactame = () => {
                       github.com/nicolas-o
                     </Button>
                   </Grid>
-                  <Grid item xs={12} className={classes.items} ref={ref}>
+                  <Grid item xs={12} className={classes.items}>
                     <LinkedInIcon className={classes.icons} />
                     <Button
                       className={classes.text}
@@ -74,17 +76,17 @@ const Contactame = () => {
               <Grid item xs={8}>
                 <Button
                   className={classes.resume}
-                  href={item[2]}
+                  href={lang[2]}
                   target="_blank"
                   data-aos="fade-up"
                   data-aos-duration="500"
                 >
-                  {item[1]}
+                  {lang[1]}
                 </Button>
               </Grid>
             </Grid>
-          </Grid>
-        ))}
+          </div>
+        </Grid>
       </Grid>
       <Grid container style={{ background: "white" }}>
         <Typography variant="body2" style={{ margin: "30px auto" }}>

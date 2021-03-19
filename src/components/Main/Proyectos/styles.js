@@ -4,6 +4,8 @@ export default makeStyles((theme) => ({
   container: {
     minHeight: "100vh!important",
     justifyContent: "center",
+    overflowX: "hidden!important",
+    overflowY: "hidden!important",
   },
   content: {
     display: "flex",
@@ -12,12 +14,16 @@ export default makeStyles((theme) => ({
     margin: "30px!important",
     maxWidth: "1000px!important",
   },
-
+  contentTitle: {
+    [theme.breakpoints.down("xs")]: {
+      transform: "scale(0.8)!important",
+    },
+  },
   divider: {
     marginBottom: "40px!important",
   },
-
-  proyectContainer: {
+  projectContainer: {},
+  imageContainer: {
     cursor: "pointer",
     backgroundPosition: "center",
     height: 240,
@@ -26,7 +32,6 @@ export default makeStyles((theme) => ({
     position: "relative",
     transition: "background-size 0.5s",
     backgroundSize: "100%",
-
     "&:hover": {
       backgroundSize: "105%",
     },
@@ -63,25 +68,18 @@ export default makeStyles((theme) => ({
       transition:
         "border-left-color 0s ease-out 0.2s, width 0.2s, height 0.25s ease-out 0.2s",
     },
+    [theme.breakpoints.down("xs")]: {
+      height: (240 / 100) * 70,
+      width: (450 / 100) * 70,
+    },
   },
   modal: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
-  presupuestoViajes: {
-    backgroundColor: "red",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    outlineStyle: "none",
-  },
-  elMaestro: {
-    backgroundColor: "green",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    outlineStyle: "none",
-  },
-  presupuestoTitle: {
+
+  proyectTitle: {
     color: "white",
     background: "black",
     padding: "8px",

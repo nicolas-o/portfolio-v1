@@ -77,7 +77,7 @@ export const ProyectosInfo = () => {
   return proyectos.map((proyecto) => {
     return (
       <Grid item key={proyecto.name}>
-        <div data-aos={proyecto.animation}>
+        <div data-aos={proyecto.animation} className={classes.projectContainer}>
           <div
             onClick={() => {
               setModalOpen(proyecto.className);
@@ -89,11 +89,11 @@ export const ProyectosInfo = () => {
               setNameOpen();
             }}
             style={{ backgroundImage: `url(${proyecto.image[0]})` }}
-            className={classes.proyectContainer}
+            className={classes.imageContainer}
           ></div>
           <Typography
             variant="body2"
-            className={`${classes.presupuestoTitle} ${
+            className={`${classes.proyectTitle} ${
               nameOpen === proyecto.name ? classes.show : classes.hide
             }`}
           >

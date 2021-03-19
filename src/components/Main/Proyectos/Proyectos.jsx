@@ -14,18 +14,19 @@ const Proyectos = () => {
 
   return (
     <Grid container spacing={0} id="proyectos" className={classes.container}>
-      {[lang].map((item) => (
-        <Grid item xs={12} className={classes.content}>
-          <div data-aos="zoom-in-down" data-aos-duration="400">
-            <Typography variant="h3">{item[0]}</Typography>
-          </div>
-          <Divider className={classes.divider} />
+      <Grid item xs={12} className={classes.content}>
+        <div data-aos="zoom-in-down" data-aos-duration="400">
+          <Typography variant="h3" className={classes.contentTitle}>
+            {lang[0]}
+          </Typography>
+        </div>
+        <Divider className={classes.divider} />
+        <div ref={ref}>
           <Grid container spacing={5} justify="center">
             <ProyectosInfo />
           </Grid>
-          <div ref={ref}></div>
-        </Grid>
-      ))}
+        </div>
+      </Grid>
     </Grid>
   );
 };

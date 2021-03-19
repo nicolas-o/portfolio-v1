@@ -5,6 +5,8 @@ export default makeStyles((theme) => ({
     minHeight: "100vh",
     backgroundColor: "#FAFAFA",
     textAlign: "center",
+    overflowX: "hidden!important",
+    overflowY: "hidden!important",
   },
   divider: {
     maxWidth: "1000px",
@@ -14,21 +16,32 @@ export default makeStyles((theme) => ({
   content: {
     margin: "30px 20px 0px 20px!important",
   },
+  contentTitle: {
+    [theme.breakpoints.down("xs")]: {
+      transform: "scale(0.8)!important",
+    },
+  },
   queHago: {
     maxWidth: "80vw",
     margin: "0 auto",
   },
   tecnologias: {
-    height: "20vh",
+    height: "100%",
     margin: "20px!important",
   },
-  grid: {
+  tecGrid: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+    gridTemplateColumns: "1fr 1fr",
     textAlign: "left",
+    [theme.breakpoints.up("sm")]: {
+      gridTemplateColumns: "1fr 1fr 1fr",
+    },
+    [theme.breakpoints.up("md")]: {
+      gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+    },
   },
   tecList: {
-    marginRight: "20px",
+    margin: "10px",
   },
   icons: {
     fontSize: "60px",

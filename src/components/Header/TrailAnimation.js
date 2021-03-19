@@ -1,6 +1,5 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { useTrail, a } from "react-spring";
-import uuid from "react-uuid";
 import { Typography } from "@material-ui/core";
 import { LanguageTracker } from "../../context/context";
 
@@ -24,7 +23,7 @@ function Trail({ children, ...props }) {
     <div {...props}>
       {trail.map(({ x, height, ...rest }, index) => (
         <a.div
-          key={uuid()}
+          key={index}
           style={{
             ...rest,
             transform: x.interpolate((x) => `translate3d(${x}px,0,0)`),

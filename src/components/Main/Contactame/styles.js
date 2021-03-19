@@ -14,6 +14,12 @@ export default makeStyles((theme) => ({
   content: {
     margin: "30px 20px 20px 20px",
   },
+  contentTitle: {
+    [theme.breakpoints.down("xs")]: {
+      transform: "scale(0.8)!important",
+    },
+  },
+
   contactame: {
     maxWidth: "80vw",
     margin: "0 auto",
@@ -26,19 +32,30 @@ export default makeStyles((theme) => ({
     textAlign: "center",
     fontSize: "60px!important",
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     margin: "15px 0",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: "15px",
+      flexDirection: "row",
+    },
   },
   text: {
-    marginLeft: "15px",
-    fontSize: "20px",
+    fontSize: "16px",
     fontWeight: "600",
     textTransform: "lowercase",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "20px",
+      marginLeft: "10px",
+    },
   },
   icons: {
     fontSize: "42px",
     "&:hover": {
       color: "#0B5C4B",
+    },
+    [theme.breakpoints.down("xs")]: {
+      transform: "scale(0.8)!important",
     },
   },
   resume: {

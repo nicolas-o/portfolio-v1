@@ -4,6 +4,9 @@ import logo from "../../../assets/logo.svg";
 const colorStyle = "#0B5C4B";
 export default makeStyles((theme) => ({
   nav: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none!important",
+    },
     backgroundColor: "rgba(0,0,0,0)!important",
     height: "80px!important",
     boxShadow: "none!important",
@@ -48,5 +51,40 @@ export default makeStyles((theme) => ({
     background: colorStyle,
     color: "white!important",
     transform: "scale(1)!important",
+  },
+  appBar: {
+    zIndex: "9999",
+    boxShadow: "none",
+    background: "black",
+    [theme.breakpoints.up("md")]: {
+      display: "none!important",
+    },
+  },
+
+  menuButton: {
+    color: "white",
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("md")]: {
+      display: "none!important",
+    },
+    background: "black!important",
+  },
+  drawer: {
+    [theme.breakpoints.up("md")]: {
+      display: "none!important",
+    },
+  },
+  drawerPaper: {
+    marginTop: "64px",
+    background: "black",
+  },
+  list: {
+    display: "flex!important",
+    flexDirection: "column!important",
+    padding: "0!important",
+  },
+  drawerLinks: {
+    width: "100%",
+    textAlign: "center",
   },
 }));

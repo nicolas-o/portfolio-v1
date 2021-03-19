@@ -1,14 +1,37 @@
 import { makeStyles } from "@material-ui/core/styles";
 import torres from "../../assets/torres-del-paine.jpg";
 
+const colorStyle = "#0B5C4B";
+
 export default makeStyles((theme) => ({
+  header: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5)) , url(${torres})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    height: "100vh",
+  },
   container: {
     display: "flex",
     flexDirection: "column",
     color: "white",
-    margin: "0 400px !important",
-    maxWidth: "700px",
+    alignItems: "center",
+    width: "100vw!important",
   },
+  headerContainer: {
+    transform: "scale(0.7)",
+    [theme.breakpoints.up("sm")]: {
+      transform: "scale(1)",
+    },
+
+    [theme.breakpoints.up("md")]: {
+      transform: "scale(1)",
+      marginLeft: "-500px",
+      marginTop: "-100px",
+    },
+  },
+
   button: {
     color: "white",
     textTransform: "uppercase",
@@ -27,7 +50,7 @@ export default makeStyles((theme) => ({
     transition: "background 0.4s ease-out, margin-left 0.5s",
     "&:hover": {
       background: "#0B5C4B",
-      marginLeft: "30px",
+      marginLeft: "50px",
     },
   },
 
@@ -40,12 +63,6 @@ export default makeStyles((theme) => ({
     },
   },
 
-  header: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5)) , url(${torres})`,
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    minHeight: "100vh",
-  },
   contactArrow: {
     marginLeft: "5px",
   },
