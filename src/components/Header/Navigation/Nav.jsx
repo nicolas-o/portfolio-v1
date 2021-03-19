@@ -9,7 +9,6 @@ import { LanguageTracker } from "../../../context/context";
 const Nav = () => {
   const { language } = useContext(LanguageTracker);
   const lang = language[0].nav;
-
   const classes = useStyles();
   const navSpring = useSpring({
     from: { transform: "translate(0, -100px)" },

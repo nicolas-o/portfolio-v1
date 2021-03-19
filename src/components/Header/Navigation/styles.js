@@ -53,6 +53,7 @@ export default makeStyles((theme) => ({
     transform: "scale(1)!important",
   },
   appBar: {
+    paddingRight: "0!important",
     minHeight: "64px!important",
     zIndex: "9999!important",
     boxShadow: "none!important",
@@ -64,15 +65,18 @@ export default makeStyles((theme) => ({
   bar: {
     minHeight: "64px!important",
     padding: "0 24px!important",
+    background: "black!important",
   },
 
   menuButton: {
     color: "white",
+    padding: "0",
+    transform: "scale(1.5)",
+    background: "black!important",
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("md")]: {
       display: "none!important",
     },
-    background: "black!important",
   },
   drawer: {
     [theme.breakpoints.up("md")]: {
@@ -84,6 +88,8 @@ export default makeStyles((theme) => ({
     background: "black!important",
   },
   list: {
+    overflowX: "hidden!important",
+    overflowY: "hidden!important",
     display: "flex!important",
     flexDirection: "column!important",
     padding: "0!important",
@@ -91,5 +97,27 @@ export default makeStyles((theme) => ({
   drawerLinks: {
     width: "100%",
     textAlign: "center",
+  },
+  languageMenuContainer: {
+    display: "flex",
+    alignContent: "center",
+    width: "50px",
+    [theme.breakpoints.down("md")]: {
+      marginRight: "20px",
+    },
+  },
+  btnFont: {
+    color: "white",
+    [theme.breakpoints.down("md")]: {
+      color: "black",
+    },
+  },
+
+  btnImage: {
+    width: "19px",
+    marginRight: "5px",
+    [theme.breakpoints.down("md")]: {
+      transform: "scale(1.6)",
+    },
   },
 }));

@@ -9,3 +9,11 @@
 .slick-next:before {
   color: #808080 !important;
 }
+
+html {
+  overflow-x: scroll;
+}
+
+body {
+  padding-right: 0 !important;
+}

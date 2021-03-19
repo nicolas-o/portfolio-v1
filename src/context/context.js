@@ -11,19 +11,19 @@ export const Provider = ({ children }) => {
   const [lang, dispatch] = useReducer(contextReducer, initial);
   const language = lang === "en" ? english : spanish;
 
-  const ChangeToEng = () => {
+  const changeToEng = () => {
     dispatch({ type: "CHANGE_ENGLISH" });
   };
 
-  const ChangeToSpa = () => {
+  const changeToSpa = () => {
     dispatch({ type: "CHANGE_SPANISH" });
   };
 
   return (
     <LanguageTracker.Provider
       value={{
-        ChangeToEng,
-        ChangeToSpa,
+        changeToEng,
+        changeToSpa,
         lang,
         language,
       }}

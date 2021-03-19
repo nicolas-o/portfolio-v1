@@ -9,11 +9,14 @@ import MenuList from "@material-ui/core/MenuList";
 import Button from "@material-ui/core/Button";
 import usa from "../../../assets/usa_flag.jpg";
 import spain from "../../../assets/spain_flag.jpg";
+import useStyles from "./styles";
 
 const LanguageMenu = () => {
   const { changeToEng, changeToSpa, lang } = useContext(LanguageTracker);
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
+  const classes = useStyles();
+
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -51,24 +54,19 @@ const LanguageMenu = () => {
   }, [open]);
 
   return (
-    <div style={{ display: "flex", alignContent: "center", width: "50px" }}>
+    <div className={classes.languageMenuContainer}>
       <div>
         <Button
           ref={anchorRef}
           aria-controls={open ? "menu-list-grow" : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-          style={{
-            color: "white",
-          }}
+          className={classes.btnFont}
         >
           <img
             src={lang === "en" ? usa : spain}
             alt="usa flag"
-            style={{
-              width: "19px",
-              marginRight: "5px",
-            }}
+            className={classes.btnImage}
           />
           {lang}
         </Button>

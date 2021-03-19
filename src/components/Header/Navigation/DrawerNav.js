@@ -1,10 +1,18 @@
-import { Drawer, Toolbar, IconButton, List, AppBar } from "@material-ui/core";
+import { useState, useContext } from "react";
+import {
+  Drawer,
+  Toolbar,
+  IconButton,
+  List,
+  AppBar,
+  Button,
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import useStyles from "./styles";
 import { useTheme } from "@material-ui/core/styles";
-import { useState, useContext } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { LanguageTracker } from "../../../context/context";
+import LanguageMenu from "./LanguageMenu";
 
 const DrawerNav = () => {
   const classes = useStyles();
@@ -20,6 +28,16 @@ const DrawerNav = () => {
     <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.bar}>
+          <Button
+            className={classes.logo}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+          ></Button>
+          <LanguageMenu />
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -90,7 +108,6 @@ const DrawerNav = () => {
           </List>
         </Drawer>
       </nav>
-      *
     </>
   );
 };
