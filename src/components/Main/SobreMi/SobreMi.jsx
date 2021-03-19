@@ -37,7 +37,7 @@ const SobreMi = () => {
                 target="_blank"
                 className={classes.links}
               >
-                <strong>Brigham Young University.</strong>
+                <strong>Brigham Young University</strong>
               </a>
               {lang[2]}
             </Typography>
