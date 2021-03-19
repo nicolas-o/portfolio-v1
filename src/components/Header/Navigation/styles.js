@@ -53,12 +53,17 @@ export default makeStyles((theme) => ({
     transform: "scale(1)!important",
   },
   appBar: {
+    minHeight: "64px!important",
     zIndex: "9999!important",
     boxShadow: "none!important",
     background: "black!important",
     [theme.breakpoints.up("md")]: {
       display: "none!important",
     },
+  },
+  bar: {
+    minHeight: "64px!important",
+    padding: "0 24px!important",
   },
 
   menuButton: {

@@ -19,7 +19,7 @@ const DrawerNav = () => {
   return (
     <>
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.bar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
