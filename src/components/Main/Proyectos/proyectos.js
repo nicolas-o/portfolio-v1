@@ -20,7 +20,7 @@ export const proyectosSpa = [
     animation: "fade-right",
     tecnologias: ["React.js", "Firebase", "Chart-2.js", "Material-UI"],
     webLink: "https://presupuesto-de-viajes.netlify.app/",
-    githubLink: "#",
+    githubLink: "https://github.com/nicolas-o/presupuesto-viajes",
     description:
       "Esta es una aplicación simple para poder calcular exactamente los gastos que se harían para ciertos viajes y tener un presupuesto más certero. Desarrollé esta aplicación con React.js y utilizando firebase para almacenar el presupuesto y los gastos.",
   },
@@ -39,7 +39,7 @@ export const proyectosSpa = [
       "React-router",
     ],
     webLink: "https://el-maestro.netlify.app/",
-    githubLink: "#",
+    githubLink: "https://github.com/nicolas-o/el-maestro",
     description:
       "Esta es una aplicación que desarrollé pensando en una sanguchería, despliega el menú de forma simple y de fácil acceso. La desarrollé utilizando React.js, material-UI para el estilo y react-spring para las animaciones.",
   },
@@ -57,8 +57,7 @@ export const proyectosSpa = [
       "Illustrator",
     ],
     webLink: "https://nicolas-orellana.netlify.app/",
-    githubLink: "#",
-
+    githubLink: "https://github.com/nicolas-o/portfolio-v1",
     description:
       "Este es el primer portafolio que he desarrollado con React.js, Material-UI, React-spring y otras librerías.",
   },
@@ -72,7 +71,7 @@ export const proyectosEng = [
     animation: "fade-right",
     tecnologias: ["React.js", "Firebase", "Chart-2.js", "Material-UI"],
     webLink: "https://presupuesto-de-viajes.netlify.app/",
-    githubLink: "#",
+    githubLink: "https://github.com/nicolas-o/presupuesto-viajes",
     description:
       "This is a simple app to calculate the cost of travel expenses the user will need to know for certain trips. I developed this app with React.js and firebase to keep the data on local storage.",
   },
@@ -91,7 +90,7 @@ export const proyectosEng = [
       "React-router",
     ],
     webLink: "https://el-maestro.netlify.app/",
-    githubLink: "#",
+    githubLink: "https://github.com/nicolas-o/el-maestro",
     description:
       "I made this app thinking about a fast-food restaurant. It has a very simple and easy to use interface. I developed it with React.js, Material-UI for styling, and react-spring for animations.",
   },
@@ -109,8 +108,7 @@ export const proyectosEng = [
       "Illustrator",
     ],
     webLink: "https://nicolas-orellana.netlify.app/",
-    githubLink: "#",
-
+    githubLink: "https://github.com/nicolas-o/portfolio-v1",
     description:
       "This is the first portfolio that I've developed. I made it with React.js, Material-UI, React-spring, and other libraries.",
   },
