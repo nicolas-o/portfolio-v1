@@ -72,7 +72,6 @@ export default makeStyles((theme) => ({
     color: "white",
     padding: "0",
     transform: "scale(1.5)",
-    background: "black!important",
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("md")]: {
       display: "none!important",
@@ -107,9 +106,9 @@ export default makeStyles((theme) => ({
     },
   },
   btnFont: {
-    color: "white",
+    color: "white!important",
     [theme.breakpoints.down("md")]: {
-      color: "black",
+      color: "black!important",
     },
   },
 
