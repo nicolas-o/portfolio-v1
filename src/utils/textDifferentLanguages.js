@@ -1,5 +1,5 @@
-import resumeSpa from "../assets/NicolasOrellanaCV.pdf";
-import resumeEng from "../assets/NicolasOrellanaCV(eng).pdf";
+import resumeSpa from "../assets/nicolasOrellanaCV.pdf";
+import resumeEng from "../assets/nicolasOrellanaCV(eng).pdf";
 
 export const spanish = [
   {

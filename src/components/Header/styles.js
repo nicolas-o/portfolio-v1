@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import torres from "../../assets/torres-del-paine.jpg";
-
-const colorStyle = "#0B5C4B";
+import torres from "../../assets/images/torres-del-paine.jpg";
 
 export default makeStyles((theme) => ({
   header: {

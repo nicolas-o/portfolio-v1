@@ -1,21 +1,27 @@
-import { useRef, useState, useContext } from "react";
+import { useRef, useState, useContext, useEffect } from "react";
 import useStyles from "./styles";
 import { Grid } from "@material-ui/core";
 import Trail from "./TrailAnimation";
-import Nav from "./Navigation/Nav";
-import DrawerNav from "./Navigation/DrawerNav";
+import Nav from "../Navigation/Nav";
+import DrawerNav from "../Navigation/DrawerNav";
 import ArrowForward from "@material-ui/icons/ArrowForward";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { LanguageTracker } from "../../context/context";
+import { Context } from "../../context/context";
 import useOnScreen from "../../utils/useOnScreen";
 
 function Header() {
   const classes = useStyles();
+  const store = useContext(Context);
+  const langOpt = store.language[0].header;
+
   const [buttonOnHover, setButtonOnHover] = useState(false);
-  const { language } = useContext(LanguageTracker);
-  const lang = language[0].header;
+
   const ref = useRef();
-  global.isHeaderVisible = useOnScreen(ref);
+  const isOnScreen = useOnScreen(ref);
+
+  useEffect(() => {
+    store.setGlobalState({ ...store.globalState, isHeaderVisible: isOnScreen });
+  }, [isOnScreen]);
 
   return (
     <Grid container spacing={0} className={classes.header}>
@@ -40,7 +46,7 @@ function Header() {
               !buttonOnHover ? classes.buttonHoverOut : null
             }`}
           >
-            {lang[3]}
+            {langOpt[3]}
             <ArrowForward
               className={`${classes.contactArrow} ${
                 buttonOnHover

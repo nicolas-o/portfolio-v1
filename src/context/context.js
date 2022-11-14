@@ -1,15 +1,23 @@
-import React, { useReducer, createContext, useEffect } from "react";
+import React, { useReducer, createContext, useState } from "react";
 import contextReducer from "./contextReducer";
 import { spanish } from "../utils/textDifferentLanguages";
 import { english } from "../utils/textDifferentLanguages";
 
-let initial = JSON.parse(localStorage.getItem("lang")) || ["es"];
+const initialLang = JSON.parse(localStorage.getItem("langOpt")) || ["es"];
 
-export const LanguageTracker = createContext(initial);
+const initialState = {
+  isHeaderVisible: "",
+  isSobreMiVisible: "",
+  isQueHagoVisible: "",
+  isProyectosVisible: "",
+  isContactameVisible: "",
+};
+export const Context = createContext();
 
 export const Provider = ({ children }) => {
-  const [lang, dispatch] = useReducer(contextReducer, initial);
-  const language = lang === "en" ? english : spanish;
+  const [globalState, setGlobalState] = useState(initialState);
+  const [langOpt, dispatch] = useReducer(contextReducer, initialLang);
+  const language = langOpt === "en" ? english : spanish;
 
   const changeToEng = () => {
     dispatch({ type: "CHANGE_ENGLISH" });
@@ -19,16 +27,14 @@ export const Provider = ({ children }) => {
     dispatch({ type: "CHANGE_SPANISH" });
   };
 
-  return (
-    <LanguageTracker.Provider
-      value={{
-        changeToEng,
-        changeToSpa,
-        lang,
-        language,
-      }}
-    >
-      {children}
-    </LanguageTracker.Provider>
-  );
+  const languageRel = {
+    globalState,
+    setGlobalState,
+    changeToEng,
+    changeToSpa,
+    langOpt,
+    language,
+  };
+
+  return <Context.Provider value={languageRel}>{children}</Context.Provider>;
 };

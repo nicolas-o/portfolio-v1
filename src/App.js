@@ -1,24 +1,25 @@
-import React from "react";
-import { useState, useEffect, useRef } from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
-import SobreMi from "./components/Main/SobreMi/SobreMi";
-import QueHago from "./components/Main/QueHago/QueHago";
+import SobreMi from "./pages/SobreMi/SobreMiPage";
+import QueHago from "./pages/QueHago/QueHagoPage";
 import theme from "./Muitheme";
 import Header from "./components/Header/Header";
 import AnimationOnScroll from "./utils/AnimationScroll";
-import Proyectos from "./components/Main/Proyectos/Proyectos.jsx";
-import Contactame from "./components/Main/Contactame/Contactame";
+import Proyectos from "./pages/Proyectos/ProyectosPage";
+import Contactame from "./pages/Contactame/ContactamePage";
+import { Provider } from "./context/context";
 
 const App = () => {
   AnimationOnScroll();
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <SobreMi />
-      <QueHago />
-      <Proyectos />
-      <Contactame />
+      <Provider>
+        <Header />
+        <SobreMi />
+        <QueHago />
+        <Proyectos />
+        <Contactame />
+      </Provider>
     </ThemeProvider>
   );
 };

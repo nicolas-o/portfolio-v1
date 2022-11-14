@@ -1,18 +1,18 @@
 const contextReducer = (state, action) => {
-  let lang;
+  let langOpt;
 
   switch (action.type) {
     case "CHANGE_ENGLISH":
-      lang = "en";
-      localStorage.setItem("lang", JSON.stringify(lang));
+      langOpt = "en";
+      localStorage.setItem("langOpt", JSON.stringify(langOpt));
 
-      return lang;
+      return langOpt;
 
     case "CHANGE_SPANISH":
-      lang = "es";
-      localStorage.setItem("lang", JSON.stringify(lang));
+      langOpt = "es";
+      localStorage.setItem("langOpt", JSON.stringify(langOpt));
 
-      return lang;
+      return langOpt;
 
     default:
       return state;
